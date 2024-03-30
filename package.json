@@ -6,7 +6,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev": "nodemon backend/src/index.js"
+    "dev": "nodemon backend/src/index.js",
+    "start": "nodemon backend/src/index.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
