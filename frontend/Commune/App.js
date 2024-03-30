@@ -7,7 +7,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Login></Login>
-      <Text>test</Text>
     </View>
   );
 }
