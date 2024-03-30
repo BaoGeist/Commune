@@ -6,6 +6,7 @@ The following are required to be installed on your system:
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Git](https://git-scm.com/downloads)
+- [ngrok](https://ngrok.com/download)
 
 ### Frontend Installation
 
@@ -35,7 +36,29 @@ npm install
 npx expo start
 ```
 
-6. Run the expo application on your device. For Android, download the Expo Go application and scan the provided QR code. For Apple, simply scan the QR code with your camera.
+6. Run the expo application on your device. Download the Expo Go application on your device (should work on both Android and Apple)
+
+### Backend Installation
+
+1. Assuming you've already done Step 1 and 2 of the Frontend Installation
+
+2. Add needed Firebase environment variables to .env in the overall directory.
+
+3. Run npm start from the root directory, and you should have a working backend.
+
+```
+npm start
+```
+
+4. For the frontend to be able to connect to the backend, you need to expose the localhost:3000 port of the backend on a reverse proxy. This can be done with the below command in root. 
+
+```
+ngrok http 3000
+```
+
+5. Ngrok should have created a reverse proxy; take the http provided by ngrok and paste it a .env in the frontend/Commune directory
+
+6. Run the expo application on your device. Download the Expo Go application on your device (should work on both Android and Apple)
 
 ### Branch and Commit Message Convention
 
