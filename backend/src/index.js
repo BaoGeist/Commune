@@ -7,8 +7,6 @@ const loginRouter = require('./routes/loginRouter.js')
 app.use(express.json());
 app.use("/", loginRouter)
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
+app.listen(3000, () => {
+    console.log('Listening on port 3000')
+})
