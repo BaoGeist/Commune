@@ -1,11 +1,18 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+// HomeTabs.js
 
-const Home = () => {
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Summarize from './Summarize';
+import Chat from './Chat';
+
+const Tab = createBottomTabNavigator();
+
+const Home = ({navigation}) => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Welcome to the Home Page!</Text>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Settings" component={Summarize} />
+      <Tab.Screen name="Profile" component={Chat} />
+    </Tab.Navigator>
   );
 };
 

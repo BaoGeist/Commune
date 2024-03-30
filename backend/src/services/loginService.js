@@ -18,6 +18,8 @@ const getAllUsers = async() => {
 }
 
 const login = async(email, password) => {
+    console.log("Logging in call")
+
     const usersCol = collection(db, 'users');
     const q = query(usersCol, where('email', '==', email));
     const querySnapshot = await getDocs(q);
