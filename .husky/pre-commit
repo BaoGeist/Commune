@@ -1,4 +1,0 @@
-#!/bin/sh
-echo '' > .git/COMMIT_EDITMSG
-
-npx commitlint --edit "$1"
