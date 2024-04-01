@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Summarize = ({navigation}) => {
+const SummarizeScreen = ({navigation}) => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Welcome to the Summarize Page!</Text>
@@ -9,4 +9,4 @@ const Summarize = ({navigation}) => {
   );
 };
 
-export default Summarize;
+export default SummarizeScreen;

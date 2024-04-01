@@ -33,3 +33,5 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+backend\src\commune-5a4a9-firebase-adminsdk-602wg-3bc51d2c50.json

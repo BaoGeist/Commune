@@ -25,7 +25,7 @@ export default function Login({navigation}) {
             if (response && response.user && response.user.uid) {
                 const response = await axios.post(process.env.API_URL+'account/signIn', data = {email: email});
                 const body = response.data
-                console.log(body)
+                console.log(typeof body)
 
                 navigation.navigate('Home', { chatsData: body })
             }
