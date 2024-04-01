@@ -23,7 +23,11 @@ export default function Login({navigation}) {
             console.log(response);
 
             if (response && response.user && response.user.uid) {
-                navigation.navigate('Home')
+                const response = await axios.post(process.env.API_URL+'account/signIn', data = {email: email});
+                const body = response.data
+                console.log(body)
+
+                navigation.navigate('Home', { chatsData: body })
             }
         } catch (error) {
             console.log(error);
@@ -45,8 +49,6 @@ export default function Login({navigation}) {
             setLoading(false);
         }
     }
-
-    
 
     return (
         <View style={tw`flex-1 justify-center items-center bg-white`}>

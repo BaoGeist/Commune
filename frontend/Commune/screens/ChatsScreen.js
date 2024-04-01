@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Chat = ({navigation}) => {
+const Chat = ({navigation, route}) => {
+  const { chatsData } = route.params;
+
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Welcome to the Chat Page!</Text>
+      <Text>{chatsData[0]}</Text>
     </View>
   );
 };
