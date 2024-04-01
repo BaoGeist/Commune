@@ -1,8 +1,3 @@
-// const FIREBASE_APP = require('../FirebaseConfig.js')
-// const { getFirestore, collection, getDocs, query, where } = require('firebase/firestore/lite');
-
-// const db = getFirestore(FIREBASE_APP)
-
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
 require('dotenv').config();

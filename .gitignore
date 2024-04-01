@@ -128,3 +128,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+backend/src/commune-5a4a9-firebase-adminsdk-h1hyn-3e18bae69b.json
