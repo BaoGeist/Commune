@@ -8,8 +8,8 @@ const Tab = createBottomTabNavigator();
 const Home = ({navigation}) => {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Settings" component={Summarize} />
-      <Tab.Screen name="Profile" component={Chat} />
+      <Tab.Screen name="Settings" component={Summarize} options={{ headerShown: false }}/>
+      <Tab.Screen name="Profile" component={Chat} options={{ headerShown: false }}/>
     </Tab.Navigator>
   );
 };
