@@ -1,9 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { TextInput,TouchableOpacity, Text, View, Image, StyleSheet, KeyboardAvoidingView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
-import Summarize from './SummarizeScreen';
-import Chat from './ChatsScreen';
+import SummarizeScreen from './SummarizeScreen';
+import ChatScreen from './ChatsScreen';
+import SupportStatusScreen from './SupportStatusScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,12 +14,32 @@ const Home = ({navigation, route}) => {
 
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Settings" component={Summarize} options={{ headerShown: false }}/>
       <Tab.Screen 
-        name="Profile" 
-        component={Chat} 
-        options={{ headerShown: false }}
+        name="Summarize" 
+        component={SummarizeScreen} 
+        options={{ 
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="albums" color={color} size={size} />
+          ),  }}/>
+      <Tab.Screen 
+        name="Chats" 
+        component={ChatScreen} 
+        options={{ 
+          headerShown: false, 
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="chatbox" color={color} size={size} />
+          ), }}
         initialParams={{ chatsData: chatsData }}
+      />
+      <Tab.Screen 
+        name="Support"
+        component={SupportStatusScreen}
+        options={{ 
+          headerShown:false,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+          ), }}
       />
     </Tab.Navigator>
   );
