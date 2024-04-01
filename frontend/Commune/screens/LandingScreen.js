@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Summarize from './Summarize';
-import Chat from './Chat';
+import Summarize from './SummarizeScreen';
+import Chat from './ChatsScreen';
 
 const Tab = createBottomTabNavigator();
 
